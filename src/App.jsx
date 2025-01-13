@@ -80,6 +80,8 @@ import CreateUsers from './Components/Users/CreateUsers';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SignUp from './Pages/SignUp/SignUp';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import Message from './Components/Message/Message';
+import Notification from './Components/Notification/Notification';
 
 
 function App() {
@@ -87,7 +89,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Authentication state
 
   const STATIC_EMAIL = 'admin@example.com';
-  const STATIC_PASSWORD = 'password';
+  const STATIC_PASSWORD = '1234';
 
   const handleLogin = (email, password) => {
     if (email === STATIC_EMAIL && password === STATIC_PASSWORD) {
@@ -142,6 +144,8 @@ function App() {
                         <Route path="/servicePackage" element={<ServicePackage />} />
                         <Route path="/allSubscriber" element={<AllSubscriber />} />
                         <Route path="/chart" element={<Charts />} />
+                        <Route path="/messages" element={<Message />} />
+                        <Route path="/notifications" element={<Notification />} />
                         <Route path="/tables" element={<div className="text-5xl font-bold text-center flex justify-center items-center min-h-screen">Tables Content</div>} />
                         <Route path="*" element={<Navigate to="/homepage" />} />
                       </Routes>

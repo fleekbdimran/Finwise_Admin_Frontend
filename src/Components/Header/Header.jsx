@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { MdNotificationsActive, MdDarkMode } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +24,22 @@ const Header = ({ toggleTheme }) => {
     };
   }, []);
 
+  // -------------Message-------------
+  const navigate = useNavigate();
+
+  const goToMessages = () => {
+    navigate("/messages"); // Replace '/messages' with your message page route
+  };
+  // -------------Message-------------
+
+  // -------------Notification-------------
+
+
+  const goToNotifications = () => {
+    navigate("/notifications"); // Replace '/notifications' with your notification page route
+  };
+  // -------------Notification-------------
+
   return (
     <header
       className={`flex items-center justify-between p-5 shadow-md font-poppins ${document.documentElement.classList.contains('dark') ? 'bg-gray-800 text-white' : 'bg-white text-black'
@@ -44,12 +61,18 @@ const Header = ({ toggleTheme }) => {
         </button>
 
         {/* Messages Icon */}
-        <button className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+        <button
+          onClick={goToMessages}
+          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+        >
           <FaMessage className="text-black dark:text-yellow-400" />
         </button>
 
         {/* Notifications Icon */}
-        <button className="relative p-3 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+        <button
+          onClick={goToNotifications}
+          className="relative p-3 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+        >
           <MdNotificationsActive className="text-black dark:text-yellow-400" />
         </button>
 
@@ -69,8 +92,9 @@ const Header = ({ toggleTheme }) => {
 
           {/* Dropdown menu */}
           {isMenuOpen && (
-            <div className="absolute bg-[#1f2937] shadow-lg rounded-lg p-3 mt-6 right-4">
+            <div className="absolute bg-[#1f2937] shadow-lg rounded-lg p-7 mt-5 right-4">
               <ul>
+                <li className="p-2 text-white cursor-pointer">My Profile</li>
                 <li className="p-2 text-white cursor-pointer">Setting</li>
                 <li className="p-2 text-white cursor-pointer">Logout</li>
               </ul>
