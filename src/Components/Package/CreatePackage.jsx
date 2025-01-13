@@ -4,7 +4,7 @@ import { Input, Button } from 'antd';
 const CreatePackage = () => {
   return (
     <div className="flex flex-col justify-center items-center px-4 font-poppins">
-    <h2 className="text-4xl text-center mb-4 mt-10">Create Package</h2>
+    <h2 className="text-4xl text-center mb-4 mt-10 font-semibold">Create Package</h2>
   
     <div className="w-full max-w-4xl space-y-6">  {/* Adjust max-width here */}
       <div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const ServicePackage = () => {
   return (
-    <div>
-      <h1>joy</h1>
+    <div className="text-5xl font-bold text-center flex justify-center items-center min-h-screen">
+      <h1>Service Package</h1>
     </div>
   )
 }

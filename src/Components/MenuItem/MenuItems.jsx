@@ -157,6 +157,11 @@ const items = [
         icon: <FaUsers />,
         label: <Link to="/users">User List</Link>,
       },
+      {
+        key: '10',
+        icon: <FaUsers />,
+        label: <Link to="/createUsers">Create User</Link>,
+      },
     ],
   },
   {
@@ -170,7 +175,7 @@ const items = [
         label: <Link to="/package/create">Create Package</Link>,
       },
       {
-        key: '11',
+        key: '9',
         icon: <GoPackageDependents />,
         label: <Link to="/servicePackage">Service Package</Link>,
       },
@@ -203,6 +208,7 @@ const items = [
     icon: <FaChartLine />,
     label: <Link to="/chart">Chart</Link>,
   },
+ 
   {
     key: '4',
     icon: <TbTableShortcut />,
