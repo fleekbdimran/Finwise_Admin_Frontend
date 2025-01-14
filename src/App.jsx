@@ -82,6 +82,12 @@ import SignUp from './Pages/SignUp/SignUp';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import Message from './Components/Message/Message';
 import Notification from './Components/Notification/Notification';
+import FirstRefience from './Components/FrstRefience/FirstRefience';
+import SecondRefience from './Components/SecondRefience/SecondRefience';
+import UpasList from './Components/UpasList/UpasList';
+import Wallet from './Components/Payment/Wallet';
+import Subscriber from './Components/Payment/Subscriber';
+import ConnectedList from './Components/ConnectedList/ConnectedList';
 
 
 function App() {
@@ -146,7 +152,12 @@ function App() {
                         <Route path="/chart" element={<Charts />} />
                         <Route path="/messages" element={<Message />} />
                         <Route path="/notifications" element={<Notification />} />
-                        <Route path="/tables" element={<div className="text-5xl font-bold text-center flex justify-center items-center min-h-screen">Tables Content</div>} />
+                        <Route path="/firstRefience" element={<FirstRefience/>} />
+                        <Route path="/secondRefience" element={<SecondRefience/>} />
+                        <Route path="/upasList" element={<UpasList/>} />
+                        <Route path="/wallet" element={<Wallet/>} />
+                        <Route path="/subscriber" element={<Subscriber/>} />
+                        <Route path="/connectedList" element={<ConnectedList/>} />
                         <Route path="*" element={<Navigate to="/homepage" />} />
                       </Routes>
                     </div>

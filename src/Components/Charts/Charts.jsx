@@ -9,8 +9,8 @@ const Charts = () => {
       {
         label: "Sales",
         data: [65, 59, 80, 81, 56, 55],
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(16, 99, 144, 0.6)",
+        borderColor: "rgba(16, 99, 144, 1)",
         borderWidth: 1,
       },
     ],

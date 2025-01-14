@@ -16,9 +16,9 @@ const CreateUsers = () => {
     };
 
   return (
-    <div className="block mx-auto p-8 w-full max-w-4xl font-poppins">
+    <div className="block mx-auto p-8 w-full max-w-5xl font-poppins">
     <div className="bg-white p-8 rounded-lg shadow-lg w-full">
-      <h3 className="text-4xl font-semibold mb-6 text-black-600 text-center ">
+      <h3 className="text-4xl font-semibold mb-6 text-black-600 text-center text-[#106390] underline ">
         Create User
       </h3>
       <form onSubmit={handleSubmit}>
@@ -139,7 +139,7 @@ const CreateUsers = () => {
         <div className="mt-8 flex justify-center">
           <button
             type="submit"
-            className="w-full sm:w-[200px] px-5 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full sm:w-[200px] px-5 py-3 bg-[#106390] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit
           </button>
