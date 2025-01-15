@@ -18,7 +18,7 @@ const CreateUsers = () => {
   return (
     <div className="block mx-auto p-8 w-full max-w-5xl font-poppins">
     <div className="bg-white p-8 rounded-lg shadow-lg w-full">
-      <h3 className="text-4xl font-semibold mb-6 text-black-600 text-center text-[#106390] underline ">
+      <h3 className="text-4xl font-semibold mb-6 text-black-600 text-start text-[#106390]  ">
         Create User
       </h3>
       <form onSubmit={handleSubmit}>

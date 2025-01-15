@@ -131,7 +131,7 @@ function App() {
             <Route
               path="/*"
               element={
-                <div className="container">
+                <div className="">
                   <div className="header">
                     <Header toggleTheme={toggleTheme} onLogout={handleLogout} />
                   </div>

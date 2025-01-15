@@ -36,15 +36,35 @@ const AllSubscriber = () => {
   return (
     <div className="p-6 from-white to-gray-100  text-nowrap font-poppins">
       {/* -----------------Print Buttons------------------ */}
-      <div className="flex space-x-2 justify-end">
-        <button className="bg-[#106390] text-white px-4 py-2 rounded hover:bg-[#106390] shadow text-xs">
+      <div className="flex justify-between mb-10">
+         {/* User List Title */}
+         <h3 className="text-4xl font-semibold text-black-600 text-[#106390]  justify-start">
+             All Subscription
+            </h3>
+
+        <button className="bg-[#106390] text-white px-4 py-2 rounded hover:bg-[#106390] shadow text-xs justify-end">
           Print
         </button>
       </div>
       {/* -----------------Print Buttons------------------ */}
 
       {/* ----------------------Search & Dropdown Controls-------------------------- */}
-      <div className="flex gap-3 justify-start mb-6">
+      <div className="flex gap-3 justify-end mb-6">
+
+         {/* -------------------------Dropdown-------------------------- */}
+       <div className="flex items-center space-x-1">
+            <label className="text-black text-sm font-semibold">Payment Method</label>
+            <select
+              value={paymentMethod}
+              onChange={e => setPaymentMethod(e.target.value)}
+              className="border rounded px-3 py-2 text-sm shadow-md  focus:ring-[#106390]"
+            >
+              <option value="All">Gold</option>
+              <option value="Paid">Silver</option>
+              <option value="Unpaid">Platinum</option>
+            </select>
+        </div>
+       {/* -------------------------Dropdown-------------------------- */}
 
            {/* ------------------Searchbar----------------- */}
            <form className="max-w-md w-full">
@@ -81,30 +101,14 @@ const AllSubscriber = () => {
               />
               <button
                 type="submit"
-                className="text-white absolute right-2.5 bottom-2.5 bg-[#106390] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white absolute right-2.5 bottom-2.5 bg-[#106390] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#106390] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Search
               </button>
             </div>
           </form>
           {/* ------------------Searchbar----------------- */}
-       
-       {/* -------------------------Dropdown-------------------------- */}
-       <div className="flex items-center space-x-1">
-            <label className="text-black text-sm font-semibold">Payment Method</label>
-            <select
-              value={paymentMethod}
-              onChange={e => setPaymentMethod(e.target.value)}
-              className="border rounded px-3 py-2 text-sm shadow-md  focus:ring-[#106390]"
-            >
-              <option value="All">Gold</option>
-              <option value="Paid">Silver</option>
-              <option value="Unpaid">Platinum</option>
-            </select>
-        </div>
-       {/* -------------------------Dropdown-------------------------- */}
-
-    
+           
       </div>
 
       {/* ----------------------Search & Dropdown Controls-------------------------- */}
